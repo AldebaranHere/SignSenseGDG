@@ -9,7 +9,7 @@
     <body>
         <h1>SignSense Signup</h1>
         <p class="sub">Sign up to start using SignSense.</p>
-        <form>
+        <form id="signupForm">
             <div class="input-row">
                 <img src="man.png" alt="Man Icon">
                 <input type="text" name="username" id="username-input" placeholder="Username" required>
@@ -29,14 +29,28 @@
             </div>   
         </form>
         <p>Already have an account? <a href="index.html">Login here</a></p>
-    </body>
-            <script>
-            const form = document.querySelector('form');
-            form.addEventListener('submit', function (e) {  // if detects submit then move to login.html
-                e.preventDefault(); // stop page from reloading
+
+        <script>
+            document.getElementById('signupForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const username = document.getElementById('username-input').value.trim();
+                const email = document.getElementById('email-input').value.trim();
+                const password = document.getElementById('password-input').value;
+
+                let users = JSON.parse(localStorage.getItem('users')) || {};
+
+                if (users[username]) {
+                    alert('That username is already taken.');
+                    return;
+                }
+
+                users[username] = { email: email, password: password }; // NOTE: plain text, demo only
+                localStorage.setItem('users', JSON.stringify(users));
+
+                alert('Account created! Please sign in.');
                 window.location.href = 'index.html';
             });
         </script>
     </body>
-</html>
 </html>
