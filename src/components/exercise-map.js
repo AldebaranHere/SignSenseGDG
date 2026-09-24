@@ -189,7 +189,7 @@ export class ExerciseMap {
                   <circle r="16" fill="#FFFFFF" stroke="#0E1A2B" stroke-width="3"/>
                   <circle r="7" fill="#0E1A2B"/>
                   <!-- Tooltip badge -->
-                  <text x="32" y="4" class="node-count" style="letter-spacing:0.12em; fill:#0E1A2B; font-weight:700;">YOU ARE HERE</text>
+                  <text x="32" y="4" class="node-count map-node-label" pointer-events="none" style="letter-spacing:0.12em; fill:#0E1A2B; font-weight:700; user-select:none;">YOU ARE HERE</text>
                 </g>
 
                 <!-- Finished node in Unit 3 -->

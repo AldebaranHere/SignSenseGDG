@@ -387,11 +387,23 @@
 
 .map-node {
   cursor: pointer;
-  transition: transform var(--transition-spring);
 }
 
-.map-node:hover {
-  transform: scale(1.08);
+.map-node circle {
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), stroke-width 0.2s ease, filter 0.2s ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.map-node:hover circle {
+  transform: scale(1.18);
+  filter: drop-shadow(0 2px 8px rgba(14, 26, 43, 0.25));
+}
+
+.map-node text,
+.map-node-label {
+  pointer-events: none;
+  user-select: none;
 }
 
 .map-node:focus-visible {
