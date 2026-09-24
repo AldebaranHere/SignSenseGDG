@@ -1,0 +1,92 @@
+/* src/styles/tokens.css */
+/* SignSense Design System Tokens */
+/* Prescribes spatial rhythm, typographic scale, and semantic palette */
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  /* Surface and Background Colors */
+  --page: #E9EDF2;
+  --card: #FFFFFF;
+  --card-elevated: #F8FAFC;
+  --card-dark: #0E1A2B;
+  --card-dark-secondary: #16263C;
+  --line: #D2DAE4;
+  --line-strong: #A8B8CB;
+
+  /* Typography Colors */
+  --ink: #0E1A2B;
+  --ink-2: #16263C;
+  --ink-soft: #3B4A5F;
+  --muted: #7D8CA1;
+  --text-white: #FFFFFF;
+  --text-white-translucent: rgba(255, 255, 255, 0.85);
+
+  /* Semantic Brand & Feedback Colors */
+  --amber: #E8930C;
+  --amber-dim: #F7DDB0;
+  --amber-hover: #D18206;
+  --green: #0E9C6A;
+  --green-soft: #E4F4EE;
+  --green-glow: rgba(14, 156, 106, 0.25);
+  --cyan: #3BE8B0;
+  --rose: #E11D48;
+  --rose-soft: #FFE4E6;
+
+  /* Typographic Font Families */
+  --display: "Bricolage Grotesque", "Inter", system-ui, -apple-system, sans-serif;
+  --body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --util: "Space Mono", ui-monospace, Menlo, Monaco, Consolas, monospace;
+
+  /* 8px Spatial Rhythm Multiples */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Border Radii */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-full: 9999px;
+
+  /* Elevation Shadows */
+  --shadow-subtle: 0 1px 3px rgba(14, 26, 43, 0.05);
+  --shadow-card: 0 4px 12px -2px rgba(14, 26, 43, 0.06), 0 2px 4px -1px rgba(14, 26, 43, 0.03);
+  --shadow-popover: 0 12px 28px -4px rgba(14, 26, 43, 0.12);
+
+  /* Spring Transitions */
+  --transition-fast: 120ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-spring: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100dvh;
+}
+
+/* Accessibility Focus Rings */
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}

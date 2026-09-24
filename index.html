@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SignSense — Auslan Sign Language Learning & Real-Time Practice</title>
+  <meta name="description" content="Learn Australian Sign Language (Auslan) through active practice. Practice the Auslan alphabet and vocabulary with real-time hand tracking.">
+
+  <!-- Typography: Bricolage Grotesque, Inter, Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="src/styles/tokens.css">
+  <link rel="stylesheet" href="src/styles/app.css">
+
+  <!-- MediaPipe Hands & Camera Utils for In-Browser Hand Tracking -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="app-shell" id="app" role="main">
+    <!-- View mounted dynamically by router -->
+  </div>
+
+  <!-- Main ES6 Application Bundle -->
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
