@@ -119,11 +119,11 @@ export function getAccuracyRate(state) {
 
 function getNextSequentialLessonId(completedLessonId, finishedList) {
   const LESSON_ORDER = [
-    "fs-1", "fs-2", "fs-3", "fs-4", "fs-5", "fs-6",
+    "fs-1", "fs-2", "fs-3",
     "greet-1", "greet-2", "greet-3", "greet-4",
-    "food-1", "food-2",
-    "fam-1", "fam-2",
-    "num-1"
+    "food-1", "food-2", "food-3", "food-4",
+    "fam-1", "fam-2", "fam-3", "fam-4",
+    "num-1", "num-2", "num-3", "num-4"
   ];
   const idx = LESSON_ORDER.indexOf(completedLessonId);
   if (idx !== -1 && idx + 1 < LESSON_ORDER.length) {

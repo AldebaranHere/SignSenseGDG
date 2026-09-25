@@ -1,6 +1,6 @@
 // src/data/curriculum.js
 // Auslan SignSense Curriculum Definition
-// Units, Lessons, Signs, and Demonstration Assets
+// 5 Units, 19 Lessons matching img_1.png hand graphic from README handoff
 
 export const CURRICULUM = {
   units: [
@@ -11,7 +11,7 @@ export const CURRICULUM = {
       shortTitle: "Fingerspelling",
       category: "ALPHABET",
       description: "Learn the traditional Auslan two-handed manual alphabet (A-Z).",
-      totalLessons: 6,
+      totalLessons: 3,
       lessons: [
         {
           id: "fs-1",
@@ -81,11 +81,11 @@ export const CURRICULUM = {
         },
         {
           id: "fs-2",
-          title: "First Consonants (B, C, D, F, G)",
+          title: "Consonants (B to M)",
           unitSlug: "fingerspelling",
           unitTitle: "Fingerspelling",
           category: "ALPHABET · CONSONANTS",
-          sentenceLabel: "Consonants B to G · 5 signs",
+          sentenceLabel: "Consonants B to M · 5 signs",
           translation: "Two-handed formations for B, C, D, F, and G.",
           signs: [
             {
@@ -105,7 +105,7 @@ export const CURRICULUM = {
               name: "Letter C",
               type: "image",
               mediaUrl: "public/assets/images/alphabet/th_c.jpg",
-              description: "Curve thumb and fingers of dominant hand to form a 'C' shape.",
+              description: "Curve dominant hand in a 'C' shape with thumb and fingers separated.",
               signbankUrl: "https://auslan.org.au/spell/twohanded.html",
               signNumber: 2,
               totalSigns: 5
@@ -116,7 +116,7 @@ export const CURRICULUM = {
               name: "Letter D",
               type: "image",
               mediaUrl: "public/assets/images/alphabet/th_d.jpg",
-              description: "Touch dominant thumb and index finger against extended non-dominant index finger.",
+              description: "Touch dominant index and thumb to non-dominant index to form a upright D loop.",
               signbankUrl: "https://auslan.org.au/spell/twohanded.html",
               signNumber: 3,
               totalSigns: 5
@@ -127,7 +127,7 @@ export const CURRICULUM = {
               name: "Letter F",
               type: "image",
               mediaUrl: "public/assets/images/alphabet/th_f.jpg",
-              description: "Extend index and middle fingers of both hands, placing dominant across non-dominant.",
+              description: "Rest two extended dominant fingers across two extended non-dominant fingers.",
               signbankUrl: "https://auslan.org.au/spell/twohanded.html",
               signNumber: 4,
               totalSigns: 5
@@ -138,7 +138,7 @@ export const CURRICULUM = {
               name: "Letter G",
               type: "image",
               mediaUrl: "public/assets/images/alphabet/th_g.jpg",
-              description: "Place both closed fists together, one on top of the other.",
+              description: "Place both closed fists together, dominant on top of non-dominant.",
               signbankUrl: "https://auslan.org.au/spell/twohanded.html",
               signNumber: 5,
               totalSigns: 5
@@ -147,89 +147,12 @@ export const CURRICULUM = {
         },
         {
           id: "fs-3",
-          title: "Mid Consonants (H, J, K, L, M, N)",
+          title: "Consonants (N to Z)",
           unitSlug: "fingerspelling",
           unitTitle: "Fingerspelling",
           category: "ALPHABET · CONSONANTS",
-          sentenceLabel: "Consonants H to N · 6 signs",
-          translation: "Two-handed formations for H, J, K, L, M, and N.",
-          signs: [
-            {
-              id: "H",
-              gloss: "H",
-              name: "Letter H",
-              type: "image",
-              mediaUrl: "public/assets/images/alphabet/th_h.jpg",
-              description: "Flat dominant palm sweeps forward across flat non-dominant palm.",
-              signbankUrl: "https://auslan.org.au/spell/twohanded.html",
-              signNumber: 1,
-              totalSigns: 6
-            },
-            {
-              id: "J",
-              gloss: "J",
-              name: "Letter J",
-              type: "image",
-              mediaUrl: "public/assets/images/alphabet/th_j.jpg",
-              description: "Dominant index traces along non-dominant palm and curls up the middle finger.",
-              signbankUrl: "https://auslan.org.au/spell/twohanded.html",
-              signNumber: 2,
-              totalSigns: 6
-            },
-            {
-              id: "K",
-              gloss: "K",
-              name: "Letter K",
-              type: "image",
-              mediaUrl: "public/assets/images/alphabet/th_k.jpg",
-              description: "Bend dominant index finger across upright non-dominant index finger.",
-              signbankUrl: "https://auslan.org.au/spell/twohanded.html",
-              signNumber: 3,
-              totalSigns: 6
-            },
-            {
-              id: "L",
-              gloss: "L",
-              name: "Letter L",
-              type: "image",
-              mediaUrl: "public/assets/images/alphabet/th_l.jpg",
-              description: "Dominant index lies flat across open non-dominant palm.",
-              signbankUrl: "https://auslan.org.au/spell/twohanded.html",
-              signNumber: 4,
-              totalSigns: 6
-            },
-            {
-              id: "M",
-              gloss: "M",
-              name: "Letter M",
-              type: "image",
-              mediaUrl: "public/assets/images/alphabet/th_m.jpg",
-              description: "Place three dominant fingers (index, middle, ring) on non-dominant palm.",
-              signbankUrl: "https://auslan.org.au/spell/twohanded.html",
-              signNumber: 5,
-              totalSigns: 6
-            },
-            {
-              id: "N",
-              gloss: "N",
-              name: "Letter N",
-              type: "image",
-              mediaUrl: "public/assets/images/alphabet/th_n.jpg",
-              description: "Place two dominant fingers (index and middle) on non-dominant palm.",
-              signbankUrl: "https://auslan.org.au/spell/twohanded.html",
-              signNumber: 6,
-              totalSigns: 6
-            }
-          ]
-        },
-        {
-          id: "fs-4",
-          title: "Upper Consonants (P, Q, R, S, T)",
-          unitSlug: "fingerspelling",
-          unitTitle: "Fingerspelling",
-          category: "ALPHABET · CONSONANTS",
-          sentenceLabel: "Consonants P to T · 5 signs",
-          translation: "Two-handed formations for P, Q, R, S, and T.",
+          sentenceLabel: "Consonants N to Z · 5 signs",
+          translation: "Two-handed formations for P, S, V, W, and Y.",
           signs: [
             {
               id: "P",
@@ -237,31 +160,9 @@ export const CURRICULUM = {
               name: "Letter P",
               type: "image",
               mediaUrl: "public/assets/images/alphabet/th_p.jpg",
-              description: "Touch index and thumb of dominant hand to upright non-dominant index to form a P loop.",
+              description: "Touch index and thumb of dominant hand to upright non-dominant index.",
               signbankUrl: "https://auslan.org.au/spell/twohanded.html",
               signNumber: 1,
-              totalSigns: 5
-            },
-            {
-              id: "Q",
-              gloss: "Q",
-              name: "Letter Q",
-              type: "image",
-              mediaUrl: "public/assets/images/alphabet/th_q.jpg",
-              description: "Hook dominant index through circle formed by non-dominant index and thumb.",
-              signbankUrl: "https://auslan.org.au/spell/twohanded.html",
-              signNumber: 2,
-              totalSigns: 5
-            },
-            {
-              id: "R",
-              gloss: "R",
-              name: "Letter R",
-              type: "image",
-              mediaUrl: "public/assets/images/alphabet/th_r.jpg",
-              description: "Hook dominant curved index finger across non-dominant upright index finger.",
-              signbankUrl: "https://auslan.org.au/spell/twohanded.html",
-              signNumber: 3,
               totalSigns: 5
             },
             {
@@ -272,31 +173,9 @@ export const CURRICULUM = {
               mediaUrl: "public/assets/images/alphabet/th_s.jpg",
               description: "Hook dominant pinky finger around non-dominant pinky finger.",
               signbankUrl: "https://auslan.org.au/spell/twohanded.html",
-              signNumber: 4,
+              signNumber: 2,
               totalSigns: 5
             },
-            {
-              id: "T",
-              gloss: "T",
-              name: "Letter T",
-              type: "image",
-              mediaUrl: "public/assets/images/alphabet/th_t.jpg",
-              description: "Touch dominant index finger against lower edge of non-dominant palm near the wrist.",
-              signbankUrl: "https://auslan.org.au/spell/twohanded.html",
-              signNumber: 5,
-              totalSigns: 5
-            }
-          ]
-        },
-        {
-          id: "fs-5",
-          title: "Final Consonants (V, W, X, Y, Z)",
-          unitSlug: "fingerspelling",
-          unitTitle: "Fingerspelling",
-          category: "ALPHABET · CONSONANTS",
-          sentenceLabel: "Consonants V to Z · 5 signs",
-          translation: "Two-handed formations for V, W, X, Y, and Z.",
-          signs: [
             {
               id: "V",
               gloss: "V",
@@ -305,7 +184,7 @@ export const CURRICULUM = {
               mediaUrl: "public/assets/images/alphabet/th_v.jpg",
               description: "Form a 'V' shape with dominant index and middle fingers on non-dominant palm.",
               signbankUrl: "https://auslan.org.au/spell/twohanded.html",
-              signNumber: 1,
+              signNumber: 3,
               totalSigns: 5
             },
             {
@@ -316,18 +195,7 @@ export const CURRICULUM = {
               mediaUrl: "public/assets/images/alphabet/th_w.jpg",
               description: "Interlock fingers of both open hands pointing upward.",
               signbankUrl: "https://auslan.org.au/spell/twohanded.html",
-              signNumber: 2,
-              totalSigns: 5
-            },
-            {
-              id: "X",
-              gloss: "X",
-              name: "Letter X",
-              type: "image",
-              mediaUrl: "public/assets/images/alphabet/th_x.jpg",
-              description: "Cross dominant index finger over non-dominant index finger to form an X.",
-              signbankUrl: "https://auslan.org.au/spell/twohanded.html",
-              signNumber: 3,
+              signNumber: 4,
               totalSigns: 5
             },
             {
@@ -338,61 +206,30 @@ export const CURRICULUM = {
               mediaUrl: "public/assets/images/alphabet/th_y.jpg",
               description: "Dominant index rests in crook between non-dominant thumb and index finger.",
               signbankUrl: "https://auslan.org.au/spell/twohanded.html",
-              signNumber: 4,
-              totalSigns: 5
-            },
-            {
-              id: "Z",
-              gloss: "Z",
-              name: "Letter Z",
-              type: "image",
-              mediaUrl: "public/assets/images/alphabet/th_z.jpg",
-              description: "Dominant bent hand rests against upright non-dominant palm.",
-              signbankUrl: "https://auslan.org.au/spell/twohanded.html",
               signNumber: 5,
               totalSigns: 5
             }
           ]
-        },
-        {
-          id: "fs-6",
-          title: "Full Alphabet (A - Z)",
-          unitSlug: "fingerspelling",
-          unitTitle: "Fingerspelling",
-          category: "ALPHABET · MASTERY",
-          sentenceLabel: "Fingerspelling Master Run · 26 signs",
-          translation: "Cycle through the entire 26-letter Auslan alphabet.",
-          signs: "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map((ch, idx) => ({
-            id: ch,
-            gloss: ch,
-            name: `Letter ${ch}`,
-            type: "image",
-            mediaUrl: `public/assets/images/alphabet/th_${ch.toLowerCase()}.jpg`,
-            description: `Auslan fingerspelling handshape for letter ${ch}.`,
-            signbankUrl: "https://auslan.org.au/spell/twohanded.html",
-            signNumber: idx + 1,
-            totalSigns: 26
-          }))
         }
       ]
     },
     {
       id: "unit-2",
       slug: "greetings",
-      title: "Greetings & Essentials",
+      title: "Greetings & Social Interaction",
       shortTitle: "Greetings",
       category: "CONVERSATION",
-      description: "Fundamental Auslan conversational signs and polite responses.",
+      description: "Essential social phrases, questions, and polite exchanges in Auslan.",
       totalLessons: 4,
       lessons: [
         {
           id: "greet-1",
-          title: "Are you good?",
+          title: "Hello, you good",
           unitSlug: "greetings",
           unitTitle: "Greetings",
           category: "GREETINGS · SENTENCE 1",
           sentenceLabel: "Greetings · Sentence 1 of 4",
-          translation: "\"Are you doing well?\"",
+          translation: "\"Are you doing good?\"",
           signs: [
             {
               id: "YOU",
@@ -545,7 +382,7 @@ export const CURRICULUM = {
           unitSlug: "food-drink",
           unitTitle: "Food & drink",
           category: "FOOD & DRINK",
-          sentenceLabel: "Eating & drinking · Sentence 1 of 2",
+          sentenceLabel: "Eating & drinking · Sentence 1 of 4",
           translation: "\"I'm eating an apple.\"",
           signs: [
             {
@@ -589,7 +426,7 @@ export const CURRICULUM = {
           unitSlug: "food-drink",
           unitTitle: "Food & drink",
           category: "FOOD & DRINK",
-          sentenceLabel: "Food & drink · Sentence 2 of 2",
+          sentenceLabel: "Food & drink · Sentence 2 of 4",
           translation: "\"Drink water please.\"",
           signs: [
             {
@@ -615,6 +452,94 @@ export const CURRICULUM = {
               totalSigns: 2
             }
           ]
+        },
+        {
+          id: "food-3",
+          title: "Snacks & fruit",
+          unitSlug: "food-drink",
+          unitTitle: "Food & drink",
+          category: "FOOD & DRINK",
+          sentenceLabel: "Food & drink · Sentence 3 of 4",
+          translation: "\"More apple is good.\"",
+          signs: [
+            {
+              id: "MORE",
+              gloss: "MORE",
+              name: "More",
+              type: "video",
+              mediaUrl: "public/assets/videos/signs/more.mp4",
+              description: "Tap clustered fingertips against non-dominant hand.",
+              signbankUrl: "https://auslan.org.au/dictionary/words/more-1.html",
+              signNumber: 1,
+              totalSigns: 3
+            },
+            {
+              id: "APPLE",
+              gloss: "APPLE",
+              name: "Apple",
+              type: "video",
+              mediaUrl: "public/assets/videos/signs/apple.mp4",
+              description: "Twist knuckle of index against cheek.",
+              signbankUrl: "https://auslan.org.au/dictionary/words/apple-1.html",
+              signNumber: 2,
+              totalSigns: 3
+            },
+            {
+              id: "GOOD",
+              gloss: "GOOD",
+              name: "Good",
+              type: "video",
+              mediaUrl: "public/assets/videos/signs/good.mp4",
+              description: "Crisp thumbs-up with dominant hand.",
+              signbankUrl: "https://auslan.org.au/dictionary/words/good-1.html",
+              signNumber: 3,
+              totalSigns: 3
+            }
+          ]
+        },
+        {
+          id: "food-4",
+          title: "Hydration & health",
+          unitSlug: "food-drink",
+          unitTitle: "Food & drink",
+          category: "FOOD & DRINK",
+          sentenceLabel: "Food & drink · Sentence 4 of 4",
+          translation: "\"Drink more water, it's good.\"",
+          signs: [
+            {
+              id: "DRINK",
+              gloss: "DRINK",
+              name: "Drink",
+              type: "video",
+              mediaUrl: "public/assets/videos/signs/drink.mp4",
+              description: "Tip cupped hand toward mouth.",
+              signbankUrl: "https://auslan.org.au/dictionary/words/drink-1.html",
+              signNumber: 1,
+              totalSigns: 3
+            },
+            {
+              id: "MORE",
+              gloss: "MORE",
+              name: "More",
+              type: "video",
+              mediaUrl: "public/assets/videos/signs/more.mp4",
+              description: "Tap fingers repeatedly.",
+              signbankUrl: "https://auslan.org.au/dictionary/words/more-1.html",
+              signNumber: 2,
+              totalSigns: 3
+            },
+            {
+              id: "WATER",
+              gloss: "WATER",
+              name: "Water",
+              type: "video",
+              mediaUrl: "public/assets/videos/signs/water.mp4",
+              description: "Tap chin twice with side of index.",
+              signbankUrl: "https://auslan.org.au/dictionary/words/water-1.html",
+              signNumber: 3,
+              totalSigns: 3
+            }
+          ]
         }
       ]
     },
@@ -633,7 +558,7 @@ export const CURRICULUM = {
           unitSlug: "family-home",
           unitTitle: "Family & Home",
           category: "HOME · SENTENCE 1",
-          sentenceLabel: "Home · Sentence 1 of 2",
+          sentenceLabel: "Home · Sentence 1 of 4",
           translation: "\"I am at home now.\"",
           signs: [
             {
@@ -666,7 +591,7 @@ export const CURRICULUM = {
           unitSlug: "family-home",
           unitTitle: "Family & Home",
           category: "HOME · SENTENCE 2",
-          sentenceLabel: "School · Sentence 2 of 2",
+          sentenceLabel: "School · Sentence 2 of 4",
           translation: "\"Currently at school.\"",
           signs: [
             {
@@ -692,13 +617,79 @@ export const CURRICULUM = {
               totalSigns: 2
             }
           ]
+        },
+        {
+          id: "fam-3",
+          title: "Good home",
+          unitSlug: "family-home",
+          unitTitle: "Family & Home",
+          category: "HOME · SENTENCE 3",
+          sentenceLabel: "Family · Sentence 3 of 4",
+          translation: "\"Home is good.\"",
+          signs: [
+            {
+              id: "GOOD",
+              gloss: "GOOD",
+              name: "Good",
+              type: "video",
+              mediaUrl: "public/assets/videos/signs/good.mp4",
+              description: "Thumbs up.",
+              signbankUrl: "https://auslan.org.au/dictionary/words/good-1.html",
+              signNumber: 1,
+              totalSigns: 2
+            },
+            {
+              id: "HOME",
+              gloss: "HOME",
+              name: "Home",
+              type: "video",
+              mediaUrl: "public/assets/videos/signs/home.mp4",
+              description: "Roof shape with hands.",
+              signbankUrl: "https://auslan.org.au/dictionary/words/home-1.html",
+              signNumber: 2,
+              totalSigns: 2
+            }
+          ]
+        },
+        {
+          id: "fam-4",
+          title: "School help",
+          unitSlug: "family-home",
+          unitTitle: "Family & Home",
+          category: "HOME · SENTENCE 4",
+          sentenceLabel: "School · Sentence 4 of 4",
+          translation: "\"Need help at school.\"",
+          signs: [
+            {
+              id: "HELP",
+              gloss: "HELP",
+              name: "Help",
+              type: "video",
+              mediaUrl: "public/assets/videos/signs/help.mp4",
+              description: "Fist on palm moving up.",
+              signbankUrl: "https://auslan.org.au/dictionary/words/help-1.html",
+              signNumber: 1,
+              totalSigns: 2
+            },
+            {
+              id: "SCHOOL",
+              gloss: "SCHOOL",
+              name: "School",
+              type: "video",
+              mediaUrl: "public/assets/videos/signs/school.mp4",
+              description: "Clap palm on back of hand.",
+              signbankUrl: "https://auslan.org.au/dictionary/words/school-1.html",
+              signNumber: 2,
+              totalSigns: 2
+            }
+          ]
         }
       ]
     },
     {
       id: "unit-5",
       slug: "numbers",
-      title: "Numbers & Direction",
+      title: "Numbers & Counting",
       shortTitle: "Numbers",
       category: "CONCEPTS",
       description: "Auslan numbers, counting, and directional references.",
@@ -706,12 +697,12 @@ export const CURRICULUM = {
       lessons: [
         {
           id: "num-1",
-          title: "Counting 1 to 5",
+          title: "Counting 1 to 3",
           unitSlug: "numbers",
           unitTitle: "Numbers",
-          category: "NUMBERS · 1 TO 5",
+          category: "NUMBERS · 1 TO 3",
           sentenceLabel: "Numbers · Lesson 1 of 4",
-          translation: "\"Auslan numeral counting 1, 2, 3, 4, 5.\"",
+          translation: "\"Auslan numeral counting 1, 2, 3.\"",
           signs: [
             {
               id: "1",
@@ -743,6 +734,127 @@ export const CURRICULUM = {
               mediaUrl: "public/assets/images/yes.png",
               description: "Thumb, index, and middle finger extended upright.",
               signbankUrl: "https://auslan.org.au/numbersigns.html",
+              signNumber: 3,
+              totalSigns: 3
+            }
+          ]
+        },
+        {
+          id: "num-2",
+          title: "Counting & more",
+          unitSlug: "numbers",
+          unitTitle: "Numbers",
+          category: "NUMBERS · MORE",
+          sentenceLabel: "Numbers · Lesson 2 of 4",
+          translation: "\"Two and more.\"",
+          signs: [
+            {
+              id: "2",
+              gloss: "TWO",
+              name: "2",
+              type: "image",
+              mediaUrl: "public/assets/images/yes.png",
+              description: "Two fingers upright.",
+              signbankUrl: "https://auslan.org.au/numbersigns.html",
+              signNumber: 1,
+              totalSigns: 2
+            },
+            {
+              id: "MORE",
+              gloss: "MORE",
+              name: "More",
+              type: "video",
+              mediaUrl: "public/assets/videos/signs/more.mp4",
+              description: "Tap fingertips.",
+              signbankUrl: "https://auslan.org.au/dictionary/words/more-1.html",
+              signNumber: 2,
+              totalSigns: 2
+            }
+          ]
+        },
+        {
+          id: "num-3",
+          title: "Counting places",
+          unitSlug: "numbers",
+          unitTitle: "Numbers",
+          category: "NUMBERS · PLACES",
+          sentenceLabel: "Numbers · Lesson 3 of 4",
+          translation: "\"One home, one school.\"",
+          signs: [
+            {
+              id: "1",
+              gloss: "ONE",
+              name: "1",
+              type: "image",
+              mediaUrl: "public/assets/images/yes.png",
+              description: "Index upright.",
+              signbankUrl: "https://auslan.org.au/numbersigns.html",
+              signNumber: 1,
+              totalSigns: 3
+            },
+            {
+              id: "HOME",
+              gloss: "HOME",
+              name: "Home",
+              type: "video",
+              mediaUrl: "public/assets/videos/signs/home.mp4",
+              description: "Roof shape.",
+              signbankUrl: "https://auslan.org.au/dictionary/words/home-1.html",
+              signNumber: 2,
+              totalSigns: 3
+            },
+            {
+              id: "SCHOOL",
+              gloss: "SCHOOL",
+              name: "School",
+              type: "video",
+              mediaUrl: "public/assets/videos/signs/school.mp4",
+              description: "Clap palm.",
+              signbankUrl: "https://auslan.org.au/dictionary/words/school-1.html",
+              signNumber: 3,
+              totalSigns: 3
+            }
+          ]
+        },
+        {
+          id: "num-4",
+          title: "Counting drinks",
+          unitSlug: "numbers",
+          unitTitle: "Numbers",
+          category: "NUMBERS · QUANTITY",
+          sentenceLabel: "Numbers · Lesson 4 of 4",
+          translation: "\"Three drinks please.\"",
+          signs: [
+            {
+              id: "3",
+              gloss: "THREE",
+              name: "3",
+              type: "image",
+              mediaUrl: "public/assets/images/yes.png",
+              description: "Three fingers upright.",
+              signbankUrl: "https://auslan.org.au/numbersigns.html",
+              signNumber: 1,
+              totalSigns: 3
+            },
+            {
+              id: "DRINK",
+              gloss: "DRINK",
+              name: "Drink",
+              type: "video",
+              mediaUrl: "public/assets/videos/signs/drink.mp4",
+              description: "Cupped hand tipped to mouth.",
+              signbankUrl: "https://auslan.org.au/dictionary/words/drink-1.html",
+              signNumber: 2,
+              totalSigns: 3
+            },
+            {
+              id: "WATER",
+              gloss: "WATER",
+              name: "Water",
+              type: "video",
+              mediaUrl: "public/assets/videos/signs/water.mp4",
+              description: "Tap chin twice.",
+              signbankUrl: "https://auslan.org.au/dictionary/words/water-1.html",
               signNumber: 3,
               totalSigns: 3
             }
