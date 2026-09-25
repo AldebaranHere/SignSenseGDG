@@ -1,10 +1,17 @@
 // src/app.js
 // SignSense Main Application Router & Orchestrator
+// Coordinates AuthView, ExerciseMap, and ExerciseView with Route Guards
 
+import { AuthView } from "./components/auth-view.js";
 import { ExerciseMap } from "./components/exercise-map.js";
 import { ExerciseView } from "./components/exercise-view.js";
 import { getLessonById } from "./data/curriculum.js";
-import { loadLearnerState, saveLearnerState } from "./utils/storage.js";
+import {
+  getSessionData,
+  loadLearnerState,
+  saveLearnerState,
+  clearSessionData
+} from "./utils/storage.js";
 
 class SignSenseApp {
   constructor() {
@@ -15,7 +22,10 @@ class SignSenseApp {
   }
 
   init() {
-    if (!window.location.hash) {
+    const session = getSessionData();
+    if (!session && !window.location.hash.startsWith("#/login") && !window.location.hash.startsWith("#/signup")) {
+      window.location.hash = "#/signup";
+    } else if (!window.location.hash) {
       window.location.hash = "#/map";
     } else {
       this.handleRoute();
@@ -23,11 +33,30 @@ class SignSenseApp {
   }
 
   handleRoute() {
-    const hash = window.location.hash || "#/map";
+    const hash = window.location.hash || "#/signup";
+    const session = getSessionData();
 
+    // Destroy active view instance safely
     if (this.currentViewInstance && typeof this.currentViewInstance.destroy === "function") {
       this.currentViewInstance.destroy();
       this.currentViewInstance = null;
+    }
+
+    // Public Auth Routes
+    if (hash === "#/signup") {
+      this.renderAuth("signup");
+      return;
+    }
+
+    if (hash === "#/login") {
+      this.renderAuth("login");
+      return;
+    }
+
+    // Protected Routes: #/map and #/exercise/:id require an active session
+    if (!session) {
+      window.location.hash = "#/signup";
+      return;
     }
 
     if (hash.startsWith("#/exercise/")) {
@@ -38,16 +67,36 @@ class SignSenseApp {
     }
   }
 
+  renderAuth(mode = "signup") {
+    this.appContainer.innerHTML = "";
+    this.currentViewInstance = new AuthView(
+      this.appContainer,
+      mode,
+      (_user) => {
+        window.location.hash = "#/map";
+      },
+      (_guestUser) => {
+        window.location.hash = "#/map";
+      }
+    );
+    this.currentViewInstance.mount();
+  }
+
   renderMap() {
     this.appContainer.innerHTML = "";
-    this.currentViewInstance = new ExerciseMap(this.appContainer, (selectedLessonId) => {
-      // Update state current lesson
-      const state = loadLearnerState();
-      state.currentLessonId = selectedLessonId;
-      saveLearnerState(state);
-
-      window.location.hash = `#/exercise/${selectedLessonId}`;
-    });
+    this.currentViewInstance = new ExerciseMap(
+      this.appContainer,
+      (selectedLessonId) => {
+        const state = loadLearnerState();
+        state.currentLessonId = selectedLessonId;
+        saveLearnerState(state);
+        window.location.hash = `#/exercise/${selectedLessonId}`;
+      },
+      () => {
+        clearSessionData();
+        window.location.hash = "#/login";
+      }
+    );
     this.currentViewInstance.mount();
   }
 
